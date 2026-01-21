@@ -1,0 +1,14 @@
+- Local repository is where the project files are stored on my own computer.
+- Remote repository is the copy of the project stored on GitHub.
+- A branch is a separate version of the project used for testing or for new features.
+- A commit is a saved change with a short message explaining what was done.
+- A repository is a folder that Git tracks for changes.
+- The main branch is the primary version of the project.
+- The working directory is where you edit files before saving changes.
+- The staging area is where selected changes go before committing.
+- Git add moves files to the staging area.
+- Git commit saves staged changes to the repository history.
+- Push sends commits from my computer to GitHub.
+- Pull gets new commits from GitHub to my computer.
+- README explains what the project is and how to use it.
+- Gitignore prevents certain files from being tracked by Git.
