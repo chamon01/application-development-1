@@ -1,0 +1,15 @@
+{
+  "name": "week04",
+  "version": "1.0.0",
+  "description": "Week 4 debugging, logging, and testing",
+  "main": "order.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^30.2.0"
+  }
+}
