@@ -2,6 +2,8 @@ const express = require("express");
 const logger = require("./middleware/logger");
 const timing = require("./middleware/timing");
 const apiKey = require("./middleware/apiKey");
+const notFound = require("./helpers/notFound");
+const errorHandler = require("./middleware/errorHandler");
 
 const tasksRoutes = require("./routes/tasks");
 const listsRoutes = require("./routes/lists");
@@ -21,10 +23,7 @@ app.use((req, res, next) => {
 app.use("/tasks", tasksRoutes);
 app.use("/lists", listsRoutes);
 
-app.use((req, res) => {
-  return res.status(404).json({
-    error: { code: "NOT_FOUND", message: "Route not found" }
-  });
-});
+app.use(notFound);
+app.use(errorHandler);
 
 app.listen(3000, () => console.log("API running on http://localhost:3000"));
