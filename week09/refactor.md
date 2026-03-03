@@ -37,3 +37,20 @@ What changed:
 Why it improves quality:
 - Controllers focus on business logic
 - Validation is reusable and short-circuits correctly
+
+---
+
+## Improvement 4: Centralized 404 + error handling
+What changed:
+- Added helpers/notFound.js for a reusable 404 response
+- Added middleware/errorHandler.js as a centralized error handler
+- Updated server.js to use notFound + errorHandler instead of inline 404 logic
+
+Why it improves quality:
+- Keeps server.js cleaner and easier to read
+- Standardizes error handling across the API
+- Makes future maintenance easier (one place to adjust behavior)
+
+Before vs After:
+- Before: server.js contained inline 404 logic and no centralized error middleware
+- After: server.js uses dedicated middleware modules for 404 and error handling
